@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,14 +12,30 @@
 
     <title>demo.f90 &ndash; ForUnitTest</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="../css/pygments.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
     <link href="../css/local.css" rel="stylesheet">
-      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
@@ -70,11 +88,11 @@
     <div class="row align-items-center justify-content-between" id="info-bar">
       <div class="col">
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> BSD 3-Clause</li>
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
-              <a data-bs-toggle="tooltip"
-                 data-bs-placement="bottom" data-html="true"
-                 title=" 2.4% of total for source files.">8 statements</a>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 2.1% of total for source files.">7 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -93,9 +111,11 @@
     </div>
   </div>
   <script>
-    $(function () {
-    $('[data-bs-toggle="tooltip"]').tooltip()
-    })
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
   </script>
 
   </div>
@@ -173,7 +193,7 @@
 <!-- sourcefile~forunittest.f90 -->
 <g id="sourcefile~~demo.f90~~EfferentGraph_node2" class="node">
 <title>sourcefile~forunittest.f90</title>
-<g id="a_sourcefile~~demo.f90~~EfferentGraph_node2"><a xlink:href=".././sourcefile/forunittest.f90.html" xlink:title="forunittest.f90">
+<g id="a_sourcefile~~demo.f90~~EfferentGraph_node2"><a xlink:href="../sourcefile/forunittest.f90.html" xlink:title="forunittest.f90">
 <polygon fill="#f0ad4e" stroke="#f0ad4e" points="88,-24 0,-24 0,0 88,0 88,-24"/>
 <text text-anchor="middle" x="44" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forunittest.f90</text>
 </a>
@@ -182,22 +202,22 @@
 <!-- sourcefile~demo.f90&#45;&gt;sourcefile~forunittest.f90 -->
 <g id="sourcefile~~demo.f90~~EfferentGraph_edge1" class="edge">
 <title>sourcefile~demo.f90&#45;&gt;sourcefile~forunittest.f90</title>
-<path fill="none" stroke="#255000" stroke-dasharray="5,2" d="M124,-12C115.99,-12 107.12,-12 98.3,-12"/>
-<polygon fill="#255000" stroke="#255000" points="98.02,-8.5 88.02,-12 98.02,-15.5 98.02,-8.5"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M124,-12C115.99,-12 107.12,-12 98.3,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="98.02,-8.5 88.02,-12 98.02,-15.5 98.02,-8.5"/>
 </g>
 </g>
 </svg>
-</div>        <div><a type="button" class="graph-help" data-toggle="modal" href="#EfferentGraph-help-text">Help</a></div>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#EfferentGraph-help-text">Help</a>
+          </div>
           <div class="modal fade" id="EfferentGraph-help-text" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
                   <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-              <div class="modal-body">
+                <div class="modal-body">
 <p>Nodes of different colours represent the following: </p>
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -242,28 +262,25 @@ large graphs.</div>
         <h2><span class="anchor" id="src"></span>Source Code</h2>
         <div class="hl codehilite"><pre><span></span><a id="ln-1" name="ln-1" href="#ln-1"></a><span class="k">program </span><span class="n">demo</span>
 <a id="ln-2" name="ln-2" href="#ln-2"></a>
-<a id="ln-3" name="ln-3" href="#ln-3"></a><span class="w">   </span><span class="c">! Include module for data type definitions</span>
-<a id="ln-4" name="ln-4" href="#ln-4"></a><span class="w">   </span><span class="k">use </span><span class="n">kinds</span>
+<a id="ln-3" name="ln-3" href="#ln-3"></a><span class="w">   </span><span class="c">! Use &#39;forunittest&#39; module to access the unit_test type</span>
+<a id="ln-4" name="ln-4" href="#ln-4"></a><span class="w">   </span><span class="k">use </span><span class="n">forunittest</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">unit_test</span><span class="p">,</span><span class="w"> </span><span class="n">rk</span>
 <a id="ln-5" name="ln-5" href="#ln-5"></a>
-<a id="ln-6" name="ln-6" href="#ln-6"></a><span class="w">   </span><span class="c">! Use &#39;forunittest&#39; module to access the unit_test type</span>
-<a id="ln-7" name="ln-7" href="#ln-7"></a><span class="w">   </span><span class="k">use </span><span class="n">forunittest</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">unit_test</span>
-<a id="ln-8" name="ln-8" href="#ln-8"></a>
-<a id="ln-9" name="ln-9" href="#ln-9"></a><span class="w">   </span><span class="k">implicit none</span>
+<a id="ln-6" name="ln-6" href="#ln-6"></a><span class="w">   </span><span class="k">implicit none</span>
+<a id="ln-7" name="ln-7" href="#ln-7"></a>
+<a id="ln-8" name="ln-8" href="#ln-8"></a><span class="w">   </span><span class="c">! Declare an object of type &#39;unit_test&#39;</span>
+<a id="ln-9" name="ln-9" href="#ln-9"></a><span class="w">   </span><span class="k">type</span><span class="p">(</span><span class="n">unit_test</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ut</span>
 <a id="ln-10" name="ln-10" href="#ln-10"></a>
-<a id="ln-11" name="ln-11" href="#ln-11"></a><span class="w">   </span><span class="c">! Declare an object of type &#39;unit_test&#39;</span>
-<a id="ln-12" name="ln-12" href="#ln-12"></a><span class="w">   </span><span class="k">type</span><span class="p">(</span><span class="n">unit_test</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ut</span>
-<a id="ln-13" name="ln-13" href="#ln-13"></a>
-<a id="ln-14" name="ln-14" href="#ln-14"></a>
-<a id="ln-15" name="ln-15" href="#ln-15"></a><span class="w">   </span><span class="c">! call ut%check(res, expected, tol, msg)</span>
-<a id="ln-16" name="ln-16" href="#ln-16"></a><span class="w">   </span><span class="c">! Variables &#39;res&#39; and &#39;expected&#39; can be of types: real(rk), integer(ik), logical, or complex(rk)</span>
-<a id="ln-17" name="ln-17" href="#ln-17"></a><span class="w">   </span><span class="c">! Their ranks can be 0, 1, or 2</span>
-<a id="ln-18" name="ln-18" href="#ln-18"></a><span class="w">   </span><span class="c">! &#39;tol&#39; is an optional real(rk) parameter, default value is &#39;tiny(0.0_rk)&#39;</span>
-<a id="ln-19" name="ln-19" href="#ln-19"></a><span class="w">   </span><span class="c">! &#39;msg&#39; is an optional character parameter, default value is &#39;forunittest&#39;</span>
-<a id="ln-20" name="ln-20" href="#ln-20"></a><span class="w">   </span><span class="c">! Note: &#39;res&#39; and &#39;expected&#39; must have the same type and shape</span>
-<a id="ln-21" name="ln-21" href="#ln-21"></a><span class="w">   </span><span class="k">call </span><span class="n">ut</span><span class="p">%</span><span class="n">check</span><span class="p">(</span><span class="n">res</span><span class="o">=</span><span class="mf">1.0_rk</span><span class="p">,</span><span class="w"> </span><span class="n">expected</span><span class="o">=</span><span class="mf">1.0_rk</span><span class="p">,</span><span class="w"> </span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-5_rk</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;demo test 1&quot;</span><span class="p">)</span>
-<a id="ln-22" name="ln-22" href="#ln-22"></a><span class="w">   </span><span class="k">call </span><span class="n">ut</span><span class="p">%</span><span class="n">check</span><span class="p">(</span><span class="n">res</span><span class="o">=</span><span class="mf">2.0_rk</span><span class="p">,</span><span class="w"> </span><span class="n">expected</span><span class="o">=</span><span class="mf">1.0_rk</span><span class="p">,</span><span class="w"> </span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-5_rk</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;demo test 2&quot;</span><span class="p">)</span>
-<a id="ln-23" name="ln-23" href="#ln-23"></a>
-<a id="ln-24" name="ln-24" href="#ln-24"></a><span class="k">end program </span><span class="n">demo</span>
+<a id="ln-11" name="ln-11" href="#ln-11"></a>
+<a id="ln-12" name="ln-12" href="#ln-12"></a><span class="w">   </span><span class="c">! call ut%check(res, expected, tol, msg)</span>
+<a id="ln-13" name="ln-13" href="#ln-13"></a><span class="w">   </span><span class="c">! Variables &#39;res&#39; and &#39;expected&#39; can be of types: real(rk), integer(ik), logical, or complex(rk)</span>
+<a id="ln-14" name="ln-14" href="#ln-14"></a><span class="w">   </span><span class="c">! Their ranks can be 0, 1, or 2</span>
+<a id="ln-15" name="ln-15" href="#ln-15"></a><span class="w">   </span><span class="c">! &#39;tol&#39; is an optional real(rk) parameter, default value is &#39;tiny(0.0_rk)&#39;</span>
+<a id="ln-16" name="ln-16" href="#ln-16"></a><span class="w">   </span><span class="c">! &#39;msg&#39; is an optional character parameter, default value is &#39;forunittest&#39;</span>
+<a id="ln-17" name="ln-17" href="#ln-17"></a><span class="w">   </span><span class="c">! Note: &#39;res&#39; and &#39;expected&#39; must have the same type and shape</span>
+<a id="ln-18" name="ln-18" href="#ln-18"></a><span class="w">   </span><span class="k">call </span><span class="n">ut</span><span class="p">%</span><span class="n">check</span><span class="p">(</span><span class="n">res</span><span class="o">=</span><span class="mf">1.0_rk</span><span class="p">,</span><span class="w"> </span><span class="n">expected</span><span class="o">=</span><span class="mf">1.0_rk</span><span class="p">,</span><span class="w"> </span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-5_rk</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;demo test 1&quot;</span><span class="p">)</span>
+<a id="ln-19" name="ln-19" href="#ln-19"></a><span class="w">   </span><span class="k">call </span><span class="n">ut</span><span class="p">%</span><span class="n">check</span><span class="p">(</span><span class="n">res</span><span class="o">=</span><span class="mf">2.0_rk</span><span class="p">,</span><span class="w"> </span><span class="n">expected</span><span class="o">=</span><span class="mf">1.0_rk</span><span class="p">,</span><span class="w"> </span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-5_rk</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;demo test 2&quot;</span><span class="p">)</span>
+<a id="ln-20" name="ln-20" href="#ln-20"></a>
+<a id="ln-21" name="ln-21" href="#ln-21"></a><span class="k">end program </span><span class="n">demo</span>
 </pre></div>
 
       </section>
@@ -275,40 +292,21 @@ large graphs.</div>
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>ForUnitTest was developed by Seyed Ali Ghasemi<br>&copy; 2023 
+          <div class="col">
+            <p>
+              ForUnitTest
+ was developed by Seyed Ali Ghasemi<br>              &copy; 2025 BSD 3-Clause
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-01-03T20:52:50.977071             </p>
+ on 2025-05-25T11:15:33.640322+0000             </p>
           </div>
         </div>
         <br>
       </div> <!-- /container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
-
-    <!-- MathJax JavaScript
-             ================================================== -->
-             <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
-          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
-          });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-          <script src="../tipuesearch/tipuesearch_content.js"></script>
-          <script src="../tipuesearch/tipuesearch_set.js"></script>
-          <script src="../tipuesearch/tipuesearch.js"></script>
-
   </body>
 </html>
