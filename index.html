@@ -104,14 +104,29 @@
 
 <p><strong>ForUnitTest</strong>: A Fortran library for unit testing.</p>
 <h2>Usage</h2>
-<div class="codehilite"><pre><span></span><code><span class="k">use </span><span class="n">forunittest</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">use </span><span class="n">forunittest</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">unit_tests</span><span class="w"></span>
 
-<span class="k">type</span><span class="p">(</span><span class="n">unit_test</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ut</span><span class="w"></span>
+<span class="k">type</span><span class="p">(</span><span class="n">unit_tests</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tests</span><span class="w"></span>
 
-<span class="k">call </span><span class="n">ut</span><span class="p">%</span><span class="n">check</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="w"> </span><span class="n">expected</span><span class="p">,</span><span class="w"> </span><span class="n">tol</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"></span>
+<span class="c">! Initialize the test suite with &#39;n&#39; test cases</span>
+<span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">initialize</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+
+<span class="c">! Run test number i</span>
+<span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Test name&quot;</span><span class="p">,</span><span class="w">         </span><span class="p">&amp;</span><span class="w"> </span><span class="c">! unique name shown in report</span>
+<span class="w">   </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">result_value</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span><span class="w"> </span><span class="c">! Actual result (real, int, logical, complex)</span>
+<span class="w">   </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expected_value</span><span class="p">,</span><span class="w">      </span><span class="p">&amp;</span><span class="w"> </span><span class="c">! Expected value (same type/shape as res)</span>
+<span class="w">   </span><span class="n">tol</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-6_rk</span><span class="p">,</span><span class="w">             </span><span class="p">&amp;</span><span class="w"> </span><span class="c">! Optional: tolerance for real/complex comparisons</span>
+<span class="w">   </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Short description&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="c">! shown in summary</span>
+<span class="w">   </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Group name&quot;</span><span class="p">)</span><span class="w">          </span><span class="c">! used in grouped summaries</span>
+
+<span class="c">! Print test summary</span>
+<span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">summary</span><span class="p">(&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="n">required_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="mf">0.0_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="c">! Required % of passing tests</span>
+<span class="w">   </span><span class="n">verbose</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span><span class="w"> </span><span class="c">! 0: none, 1: group only, 2: test only, 3: both</span>
+<span class="w">   </span><span class="n">stop_fail</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.)</span><span class="w">    </span><span class="c">! Stop program if score is below required</span>
 </code></pre></div>
 
-<p>See <code>example/demo.f90</code> for a complete example.</p>
 <h2>fpm dependency</h2>
 <p>To use <code>ForUnitTest</code> as a dependency in your fpm project, include the following line in your <code>fpm.toml</code> file:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[dependencies]</span><span class="w"></span>
@@ -129,6 +144,8 @@
 <div class="codehilite"><pre><span></span><code>fpm run --example demo
 </code></pre></div>
 
+<h3>Demo Output</h3>
+<p><img alt="demo" src="demo.png"></p>
 <h2>Status</h2>
 <!-- STATUS:setup-fortran-conda:START -->
 <table>
@@ -212,7 +229,7 @@ If you find any issues or would like to suggest improvements, please open an iss
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Source Files</h3>
-              <ul><li><a href='sourcefile/demo.f90.html'>demo.f90</a></li><li><a href='sourcefile/forunittest.f90.html'>forunittest.f90</a></li><li><a href='sourcefile/test.f90.html'>test.f90</a></li></ul>
+              <ul><li><a href='sourcefile/demo.f90.html'>demo.f90</a></li><li><a href='sourcefile/demo_old.f90.html'>demo_old.f90</a></li><li><a href='sourcefile/forunittest.f90.html'>forunittest.f90</a></li><li><a href='sourcefile/test1.f90.html'>test1.f90</a></li><li><a href='sourcefile/test2.f90.html'>test2.f90</a></li></ul>
             </div>
             <div>
               <ul>
@@ -234,7 +251,7 @@ If you find any issues or would like to suggest improvements, please open an iss
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Procedures</h3>
-              <ul><li><a href='proc/print_msg.html'>print_msg</a></li><li><a href='proc/unit_test_cx0.html'>unit_test_cx0</a></li><li><a href='proc/unit_test_cx1.html'>unit_test_cx1</a></li><li><a href='proc/unit_test_cx2.html'>unit_test_cx2</a></li><li><a href='proc/unit_test_i0.html'>unit_test_i0</a></li><li><a href='proc/unit_test_i1.html'>unit_test_i1</a></li><li><a href='proc/unit_test_i2.html'>unit_test_i2</a></li><li><a href='proc/unit_test_l0.html'>unit_test_l0</a></li><li><a href='proc/unit_test_l1.html'>unit_test_l1</a></li><li><a href='proc/unit_test_l2.html'>unit_test_l2</a></li></ul>
+              <ul><li><a href='proc/initialize.html'>initialize</a></li><li><a href='proc/print_msg.html'>print_msg</a></li><li><a href='proc/set_silent.html'>set_silent</a></li><li><a href='proc/summary.html'>summary</a></li><li><a href='proc/unit_test_cx0.html'>unit_test_cx0</a></li><li><a href='proc/unit_test_cx1.html'>unit_test_cx1</a></li><li><a href='proc/unit_test_cx2.html'>unit_test_cx2</a></li><li><a href='proc/unit_test_i0.html'>unit_test_i0</a></li><li><a href='proc/unit_test_i1.html'>unit_test_i1</a></li><li><a href='proc/unit_test_i2.html'>unit_test_i2</a></li></ul>
             </div>
             <div>
               <ul>
@@ -245,7 +262,7 @@ If you find any issues or would like to suggest improvements, please open an iss
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Derived Types</h3>
-              <ul><li><a href='type/unit_test.html'>unit_test</a></li></ul>
+              <ul><li><a href='type/unit_test.html'>unit_test</a></li><li><a href='type/unit_tests.html'>unit_tests</a></li></ul>
             </div>
             <div>
               <ul>
@@ -269,7 +286,7 @@ If you find any issues or would like to suggest improvements, please open an iss
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2025-07-28T15:13:01.092536+0000             </p>
+ on 2025-08-04T14:05:45.056674+0000             </p>
           </div>
         </div>
         <br>

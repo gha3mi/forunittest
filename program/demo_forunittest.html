@@ -1,0 +1,936 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ForUnitTest">
+    <meta name="author" content="Seyed Ali Ghasemi" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>demo_forunittest &ndash; ForUnitTest</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
+    <link href="../css/local.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ForUnitTest </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>demo_forunittest      <small>Program</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> BSD 3-Clause</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 9.2% of total for programs.">12 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/demo.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/demo.f90.html'>demo.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">demo_forunittest</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/demo_forunittest.html#variable-tests~2">tests</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/demo_forunittest.html#src">demo_forunittest</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/forunittest.html'>forunittest</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 13.1.1 (20250720.1534)
+ -->
+<!-- Title: program~~demo_forunittest~~UsesGraph Pages: 1 -->
+<svg id="programdemo_forunittestUsesGraph" width="342pt" height="32pt"
+ viewBox="0.00 0.00 342.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~demo_forunittest~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28.27)">
+<title>program~~demo_forunittest~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28.27 337.81,-28.27 337.81,4 -4,4"/>
+<!-- program~demo_forunittest -->
+<g id="program~~demo_forunittest~~UsesGraph_node1" class="node">
+<title>program~demo_forunittest</title>
+<polygon fill="none" stroke="black" points="333.81,-24.27 231.54,-24.27 231.54,0 333.81,0 333.81,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="282.68" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50">demo_forunittest</text>
+</g>
+<!-- module~forunittest -->
+<g id="program~~demo_forunittest~~UsesGraph_node2" class="node">
+<title>module~forunittest</title>
+<g id="a_program~~demo_forunittest~~UsesGraph_node2"><a xlink:href="../module/forunittest.html" xlink:title="forunittest">
+<polygon fill="#337ab7" stroke="#337ab7" points="195.54,-24.27 129.27,-24.27 129.27,0 195.54,0 195.54,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="162.41" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forunittest</text>
+</a>
+</g>
+</g>
+<!-- program~demo_forunittest&#45;&gt;module~forunittest -->
+<g id="program~~demo_forunittest~~UsesGraph_edge1" class="edge">
+<title>program~demo_forunittest&#45;&gt;module~forunittest</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M231.17,-12.13C223.25,-12.13 215.12,-12.13 207.36,-12.13"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="207.46,-8.64 197.46,-12.14 207.46,-15.64 207.46,-8.64"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="program~~demo_forunittest~~UsesGraph_node3" class="node">
+<title>iso_fortran_env</title>
+<g id="a_program~~demo_forunittest~~UsesGraph_node3"><a xlink:href="http://fortranwiki.org/fortran/show/iso_fortran_env" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="93.27,-24.27 0,-24.27 0,0 93.27,0 93.27,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="46.63" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- module~forunittest&#45;&gt;iso_fortran_env -->
+<g id="program~~demo_forunittest~~UsesGraph_edge2" class="edge">
+<title>module~forunittest&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M128.8,-12.13C121.22,-12.13 112.93,-12.13 104.63,-12.13"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="104.9,-8.64 94.9,-12.14 104.9,-15.64 104.9,-8.64"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 13.1.1 (20250720.1534)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="511pt" height="32pt"
+ viewBox="0.00 0.00 511.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28.27)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28.27 506.88,-28.27 506.88,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24.27 0,-24.27 0,0 54,0 54,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="27" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="144.13,-24.27 71.87,-24.27 71.87,0 144.13,0 144.13,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="108" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="231.63,-24.27 162.37,-24.27 162.37,0 231.63,0 231.63,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="197" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="306.26,-24.27 249.74,-24.27 249.74,0 306.26,0 306.26,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="278" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="381.26,-24.27 324.74,-24.27 324.74,0 381.26,0 381.26,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="353" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="502.88,-24.27 399.12,-24.27 399.12,0 502.88,0 502.88,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="451" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <p>Demonstration of the ForUnitTest framework.</p>
+<p>This example shows how to write and run a simple suite of unit tests using ForUnitTest.</p>
+<h2>Supported Data Types</h2>
+<p>The <code>check</code> method is overloaded to support:</p>
+<ul>
+<li><strong><code>real(rk)</code></strong> values: scalar, 1D array, or 2D array</li>
+<li><strong><code>integer</code></strong> values: scalar, 1D array, or 2D array</li>
+<li><strong><code>logical</code></strong> values: scalar, 1D array, or 2D array</li>
+<li><strong><code>complex(rk)</code></strong> values: scalar, 1D array, or 2D array</li>
+</ul>
+<p>These are automatically dispatched to the correct internal test routine
+based on rank and type, with optional relative tolerance for <code>real</code> and <code>complex</code>.</p>
+<h2>How to Use</h2>
+<h3>1. <code>initialize(n)</code></h3>
+<ul>
+<li>Allocates a test suite with <code>n</code> entries.</li>
+<li>Call this once before running any tests.</li>
+</ul>
+<h3>2. <code>check(res, expected, [tol], [msg], [name], [group])</code></h3>
+<p>Compares a computed result <code>res</code> to a reference <code>expected</code> value.</p>
+<ul>
+<li><strong><code>res</code></strong>: The actual result to test (scalar, vector, or matrix).</li>
+<li><strong><code>expected</code></strong>: The correct or expected value to compare against.</li>
+<li><strong><code>tol</code></strong> <em>(optional)</em>: Tolerance (used for <code>real</code> and <code>complex</code>). If omitted, defaults to a small epsilon-based value.</li>
+<li><strong><code>msg</code></strong> <em>(optional)</em>: A short message describing the test intent. Shown in summaries.</li>
+<li><strong><code>name</code></strong> <em>(optional)</em>: A unique name for the test (used in summary tables).</li>
+<li><strong><code>group</code></strong> <em>(optional)</em>: A group tag (e.g., <code>"math"</code>, <code>"I/O"</code>, <code>"real"</code>). Used for per-group summaries.</li>
+</ul>
+<h3>3. <code>summary(required_score, [verbose], [stop_fail])</code></h3>
+<p>Prints a detailed report and checks if the test score meets your target.</p>
+<ul>
+<li><strong><code>required_score</code></strong>: Real value between 0–100. Minimum % of passed tests required to "pass".</li>
+<li><strong><code>verbose</code></strong> <em>(optional)</em>:<ul>
+<li><code>0</code>: No output</li>
+<li><code>1</code>: Group summary only</li>
+<li><code>2</code>: Per-test summary only</li>
+<li><code>3</code>: Both per-test and group summaries</li>
+</ul>
+</li>
+<li><strong><code>stop_fail</code></strong> <em>(optional)</em>:<ul>
+<li>If <code>.true.</code>, program stops with error code 1 if score &lt; required_score</li>
+</ul>
+</li>
+</ul>
+<div class="alert alert-info">
+<p class="alert-title h4">Note</p>
+<p>You can test a variety of data types (real, int, logical, complex) using a single generic <code>check(...)</code> interface.</p>
+</div>
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 13.1.1 (20250720.1534)
+ -->
+<!-- Title: program~~demo_forunittest~~CallsGraph Pages: 1 -->
+<svg id="programdemo_forunittestCallsGraph" width="641pt" height="537pt"
+ viewBox="0.00 0.00 641.00 537.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~demo_forunittest~~CallsGraph" class="graph" transform="scale(0.941152 0.941152) rotate(0) translate(4 566.56)">
+<title>program~~demo_forunittest~~CallsGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-566.56 677.08,-566.56 677.08,4 -4,4"/>
+<!-- program~demo_forunittest -->
+<g id="program~~demo_forunittest~~CallsGraph_node1" class="node">
+<title>program~demo_forunittest</title>
+<polygon fill="none" stroke="black" points="102.27,-58.56 0,-58.56 0,-34.29 102.27,-34.29 102.27,-58.56"/>
+<text xml:space="preserve" text-anchor="middle" x="51.13" y="-42.82" font-family="Helvetica,sans-Serif" font-size="10.50">demo_forunittest</text>
+</g>
+<!-- none~check -->
+<g id="program~~demo_forunittest~~CallsGraph_node2" class="node">
+<title>none~check</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node2"><a xlink:href="../type/unit_test.html#boundprocedure-check" xlink:title="unit_test%check">
+<polygon fill="#a7506f" stroke="#a7506f" points="245.04,-310.56 147.27,-310.56 147.27,-286.29 245.04,-286.29 245.04,-310.56"/>
+<text xml:space="preserve" text-anchor="middle" x="196.15" y="-294.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%check</text>
+</a>
+</g>
+</g>
+<!-- program~demo_forunittest&#45;&gt;none~check -->
+<g id="program~~demo_forunittest~~CallsGraph_edge1" class="edge">
+<title>program~demo_forunittest&#45;&gt;none~check</title>
+<path fill="none" stroke="#ff0000" d="M59.23,-58.92C81.96,-98.97 153.22,-224.54 182.45,-276.04"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="179.29,-277.56 187.27,-284.53 185.38,-274.11 179.29,-277.56"/>
+</g>
+<!-- proc~initialize -->
+<g id="program~~demo_forunittest~~CallsGraph_node3" class="node">
+<title>proc~initialize</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node3"><a xlink:href="../proc/initialize.html" xlink:title="unit_tests%initialize">
+<polygon fill="#d9534f" stroke="#d9534f" points="254.04,-58.56 138.27,-58.56 138.27,-34.29 254.04,-34.29 254.04,-58.56"/>
+<text xml:space="preserve" text-anchor="middle" x="196.15" y="-42.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_tests%initialize</text>
+</a>
+</g>
+</g>
+<!-- program~demo_forunittest&#45;&gt;proc~initialize -->
+<g id="program~~demo_forunittest~~CallsGraph_edge2" class="edge">
+<title>program~demo_forunittest&#45;&gt;proc~initialize</title>
+<path fill="none" stroke="#ff0000" d="M102.56,-46.42C110.32,-46.42 118.45,-46.42 126.52,-46.42"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="126.35,-49.92 136.35,-46.42 126.35,-42.92 126.35,-49.92"/>
+</g>
+<!-- proc~summary -->
+<g id="program~~demo_forunittest~~CallsGraph_node4" class="node">
+<title>proc~summary</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node4"><a xlink:href="../proc/summary.html" xlink:title="unit_tests%summary">
+<polygon fill="#d9534f" stroke="#d9534f" points="583.08,-143.56 461.31,-143.56 461.31,-119.29 583.08,-119.29 583.08,-143.56"/>
+<text xml:space="preserve" text-anchor="middle" x="522.19" y="-127.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_tests%summary</text>
+</a>
+</g>
+</g>
+<!-- program~demo_forunittest&#45;&gt;proc~summary -->
+<g id="program~~demo_forunittest~~CallsGraph_edge3" class="edge">
+<title>program~demo_forunittest&#45;&gt;proc~summary</title>
+<path fill="none" stroke="#ff0000" d="M88.55,-33.83C157.66,-12.16 311.14,25.25 425.31,-25.42 463.78,-42.5 493.37,-83.49 508.95,-109.2"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="505.76,-110.67 513.82,-117.55 511.81,-107.14 505.76,-110.67"/>
+</g>
+<!-- proc~unit_test_cx0 -->
+<g id="program~~demo_forunittest~~CallsGraph_node7" class="node">
+<title>proc~unit_test_cx0</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node7"><a xlink:href="../proc/unit_test_cx0.html" xlink:title="unit_test%unit_test_cx0">
+<polygon fill="#d9534f" stroke="#d9534f" points="425.31,-562.56 290.04,-562.56 290.04,-538.29 425.31,-538.29 425.31,-562.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-546.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_cx0</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_cx0 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge4" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_cx0</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M198.48,-311.03C203.23,-349.6 222.8,-467.17 290.04,-529.42 290.82,-530.14 291.62,-530.84 292.45,-531.51"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="290.48,-534.41 300.75,-537 294.34,-528.57 290.48,-534.41"/>
+</g>
+<!-- proc~unit_test_cx1 -->
+<g id="program~~demo_forunittest~~CallsGraph_node8" class="node">
+<title>proc~unit_test_cx1</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node8"><a xlink:href="../proc/unit_test_cx1.html" xlink:title="unit_test%unit_test_cx1">
+<polygon fill="#d9534f" stroke="#d9534f" points="425.31,-520.56 290.04,-520.56 290.04,-496.29 425.31,-496.29 425.31,-520.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-504.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_cx1</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_cx1 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge5" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_cx1</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M199.64,-310.64C207.09,-344.07 232.35,-437.87 290.04,-487.42 291.13,-488.36 292.26,-489.25 293.42,-490.1"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="291.28,-492.9 301.64,-495.1 294.92,-486.92 291.28,-492.9"/>
+</g>
+<!-- proc~unit_test_cx2 -->
+<g id="program~~demo_forunittest~~CallsGraph_node9" class="node">
+<title>proc~unit_test_cx2</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node9"><a xlink:href="../proc/unit_test_cx2.html" xlink:title="unit_test%unit_test_cx2">
+<polygon fill="#d9534f" stroke="#d9534f" points="425.31,-478.56 290.04,-478.56 290.04,-454.29 425.31,-454.29 425.31,-478.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-462.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_cx2</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_cx2 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge6" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_cx2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M201.52,-310.74C212.12,-338.89 241.97,-408.4 290.04,-445.42 291.39,-446.46 292.8,-447.45 294.24,-448.39"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="292.53,-451.45 302.98,-453.2 295.9,-445.31 292.53,-451.45"/>
+</g>
+<!-- proc~unit_test_i0 -->
+<g id="program~~demo_forunittest~~CallsGraph_node10" class="node">
+<title>proc~unit_test_i0</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node10"><a xlink:href="../proc/unit_test_i0.html" xlink:title="unit_test%unit_test_i0">
+<polygon fill="#d9534f" stroke="#d9534f" points="420.81,-436.56 294.54,-436.56 294.54,-412.29 420.81,-412.29 420.81,-436.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-420.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_i0</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_i0 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge7" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_i0</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M204.76,-310.74C218.88,-332.6 251.26,-378.24 290.04,-403.42 292.03,-404.71 294.1,-405.93 296.23,-407.07"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="294.65,-410.2 305.18,-411.28 297.62,-403.86 294.65,-410.2"/>
+</g>
+<!-- proc~unit_test_i1 -->
+<g id="program~~demo_forunittest~~CallsGraph_node11" class="node">
+<title>proc~unit_test_i1</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node11"><a xlink:href="../proc/unit_test_i1.html" xlink:title="unit_test%unit_test_i1">
+<polygon fill="#d9534f" stroke="#d9534f" points="420.81,-394.56 294.54,-394.56 294.54,-370.29 420.81,-370.29 420.81,-394.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-378.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_i1</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_i1 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge8" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_i1</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M212.41,-310.83C230.15,-324.76 260.75,-347.25 290.04,-361.42 293.16,-362.93 296.41,-364.37 299.73,-365.72"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="298.46,-368.99 309.06,-369.26 300.94,-362.44 298.46,-368.99"/>
+</g>
+<!-- proc~unit_test_i2 -->
+<g id="program~~demo_forunittest~~CallsGraph_node12" class="node">
+<title>proc~unit_test_i2</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node12"><a xlink:href="../proc/unit_test_i2.html" xlink:title="unit_test%unit_test_i2">
+<polygon fill="#d9534f" stroke="#d9534f" points="420.81,-352.56 294.54,-352.56 294.54,-328.29 420.81,-328.29 420.81,-352.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-336.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_i2</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_i2 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge9" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_i2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M245.02,-311.02C261.74,-315.43 280.69,-320.42 298.18,-325.02"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="296.82,-328.28 307.38,-327.44 298.6,-321.51 296.82,-328.28"/>
+</g>
+<!-- proc~unit_test_l0 -->
+<g id="program~~demo_forunittest~~CallsGraph_node13" class="node">
+<title>proc~unit_test_l0</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node13"><a xlink:href="../proc/unit_test_l0.html" xlink:title="unit_test%unit_test_l0">
+<polygon fill="#d9534f" stroke="#d9534f" points="420.81,-310.56 294.54,-310.56 294.54,-286.29 420.81,-286.29 420.81,-310.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-294.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_l0</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_l0 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge10" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_l0</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M245.45,-298.42C257.17,-298.42 269.98,-298.42 282.59,-298.42"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="282.58,-301.92 292.58,-298.42 282.58,-294.92 282.58,-301.92"/>
+</g>
+<!-- proc~unit_test_l1 -->
+<g id="program~~demo_forunittest~~CallsGraph_node14" class="node">
+<title>proc~unit_test_l1</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node14"><a xlink:href="../proc/unit_test_l1.html" xlink:title="unit_test%unit_test_l1">
+<polygon fill="#d9534f" stroke="#d9534f" points="420.81,-268.56 294.54,-268.56 294.54,-244.29 420.81,-244.29 420.81,-268.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-252.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_l1</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_l1 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge11" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_l1</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M245.02,-285.82C261.74,-281.42 280.69,-276.43 298.18,-271.82"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="298.6,-275.33 307.38,-269.4 296.82,-268.56 298.6,-275.33"/>
+</g>
+<!-- proc~unit_test_l2 -->
+<g id="program~~demo_forunittest~~CallsGraph_node15" class="node">
+<title>proc~unit_test_l2</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node15"><a xlink:href="../proc/unit_test_l2.html" xlink:title="unit_test%unit_test_l2">
+<polygon fill="#d9534f" stroke="#d9534f" points="420.81,-226.56 294.54,-226.56 294.54,-202.29 420.81,-202.29 420.81,-226.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-210.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_l2</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_l2 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge12" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_l2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M212.41,-286.01C230.15,-272.09 260.75,-249.6 290.04,-235.42 293.16,-233.91 296.41,-232.48 299.73,-231.12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="300.94,-234.41 309.06,-227.59 298.46,-227.86 300.94,-234.41"/>
+</g>
+<!-- proc~unit_test_r0 -->
+<g id="program~~demo_forunittest~~CallsGraph_node16" class="node">
+<title>proc~unit_test_r0</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node16"><a xlink:href="../proc/unit_test_r0.html" xlink:title="unit_test%unit_test_r0">
+<polygon fill="#d9534f" stroke="#d9534f" points="421.56,-184.56 293.79,-184.56 293.79,-160.29 421.56,-160.29 421.56,-184.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-168.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_r0</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_r0 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge13" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_r0</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M204.76,-286.11C218.88,-264.25 251.26,-218.61 290.04,-193.42 292.03,-192.13 294.1,-190.92 296.23,-189.77"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="297.62,-192.98 305.18,-185.56 294.65,-186.65 297.62,-192.98"/>
+</g>
+<!-- proc~unit_test_r1 -->
+<g id="program~~demo_forunittest~~CallsGraph_node17" class="node">
+<title>proc~unit_test_r1</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node17"><a xlink:href="../proc/unit_test_r1.html" xlink:title="unit_test%unit_test_r1">
+<polygon fill="#d9534f" stroke="#d9534f" points="421.56,-142.56 293.79,-142.56 293.79,-118.29 421.56,-118.29 421.56,-142.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-126.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_r1</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_r1 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge14" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_r1</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M201.52,-286.11C212.12,-257.95 241.97,-188.45 290.04,-151.42 291.39,-150.38 292.8,-149.39 294.24,-148.45"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="295.9,-151.53 302.98,-143.65 292.53,-145.4 295.9,-151.53"/>
+</g>
+<!-- proc~unit_test_r2 -->
+<g id="program~~demo_forunittest~~CallsGraph_node18" class="node">
+<title>proc~unit_test_r2</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node18"><a xlink:href="../proc/unit_test_r2.html" xlink:title="unit_test%unit_test_r2">
+<polygon fill="#d9534f" stroke="#d9534f" points="421.56,-100.56 293.79,-100.56 293.79,-76.29 421.56,-76.29 421.56,-100.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-84.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%unit_test_r2</text>
+</a>
+</g>
+</g>
+<!-- none~check&#45;&gt;proc~unit_test_r2 -->
+<g id="program~~demo_forunittest~~CallsGraph_edge15" class="edge">
+<title>none~check&#45;&gt;proc~unit_test_r2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M199.64,-286.21C207.09,-252.77 232.35,-158.97 290.04,-109.42 291.13,-108.49 292.26,-107.6 293.42,-106.74"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="294.92,-109.93 301.64,-101.74 291.28,-103.95 294.92,-109.93"/>
+</g>
+<!-- proc~set_silent -->
+<g id="program~~demo_forunittest~~CallsGraph_node6" class="node">
+<title>proc~set_silent</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node6"><a xlink:href="../proc/set_silent.html" xlink:title="unit_test%set_silent">
+<polygon fill="#d9534f" stroke="#d9534f" points="415.56,-58.56 299.79,-58.56 299.79,-34.29 415.56,-34.29 415.56,-58.56"/>
+<text xml:space="preserve" text-anchor="middle" x="357.67" y="-42.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%set_silent</text>
+</a>
+</g>
+</g>
+<!-- proc~initialize&#45;&gt;proc~set_silent -->
+<g id="program~~demo_forunittest~~CallsGraph_edge16" class="edge">
+<title>proc~initialize&#45;&gt;proc~set_silent</title>
+<path fill="none" stroke="#00ff00" d="M254.29,-46.42C265.29,-46.42 276.91,-46.42 288.22,-46.42"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="287.88,-49.92 297.88,-46.42 287.88,-42.92 287.88,-49.92"/>
+</g>
+<!-- colorize -->
+<g id="program~~demo_forunittest~~CallsGraph_node5" class="node">
+<title>colorize</title>
+<polygon fill="#777777" stroke="#777777" points="673.08,-164.56 619.08,-164.56 619.08,-140.29 673.08,-140.29 673.08,-164.56"/>
+<text xml:space="preserve" text-anchor="middle" x="646.08" y="-148.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize</text>
+</g>
+<!-- proc~summary&#45;&gt;colorize -->
+<g id="program~~demo_forunittest~~CallsGraph_edge17" class="edge">
+<title>proc~summary&#45;&gt;colorize</title>
+<path fill="none" stroke="#0000ff" d="M583.42,-141.8C591.71,-143.23 600.01,-144.66 607.72,-145.98"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="606.94,-149.4 617.38,-147.65 608.12,-142.5 606.94,-149.4"/>
+</g>
+<!-- proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_node19" class="node">
+<title>proc~print_msg</title>
+<g id="a_program~~demo_forunittest~~CallsGraph_node19"><a xlink:href="../proc/print_msg.html" xlink:title="unit_test%print_msg">
+<polygon fill="#d9534f" stroke="#d9534f" points="581.58,-310.56 462.81,-310.56 462.81,-286.29 581.58,-286.29 581.58,-310.56"/>
+<text xml:space="preserve" text-anchor="middle" x="522.19" y="-294.82" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit_test%print_msg</text>
+</a>
+</g>
+</g>
+<!-- proc~unit_test_cx0&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge18" class="edge">
+<title>proc~unit_test_cx0&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#ffda00" d="M413.3,-537.8C417.64,-535.46 421.73,-532.7 425.31,-529.42 487.5,-472.48 510.52,-369 518,-322.36"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="521.45,-322.94 519.47,-312.54 514.53,-321.91 521.45,-322.94"/>
+</g>
+<!-- proc~unit_test_cx1&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge19" class="edge">
+<title>proc~unit_test_cx1&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#b6ff00" d="M412.37,-495.84C417.02,-493.5 421.42,-490.72 425.31,-487.42 478.21,-442.57 505.19,-361.3 515.74,-321.56"/>
+<polygon fill="#b6ff00" stroke="#b6ff00" points="519.08,-322.66 518.13,-312.11 512.29,-320.95 519.08,-322.66"/>
+</g>
+<!-- proc~unit_test_cx2&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge20" class="edge">
+<title>proc~unit_test_cx2&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#48ff00" d="M411,-453.86C416.08,-451.51 420.96,-448.72 425.31,-445.42 468.76,-412.45 498.33,-353.71 512.19,-321.36"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="515.41,-322.71 516,-312.14 508.94,-320.04 515.41,-322.71"/>
+</g>
+<!-- proc~unit_test_i0&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge21" class="edge">
+<title>proc~unit_test_i0&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#00ff24" d="M408.75,-411.85C414.54,-409.47 420.2,-406.68 425.31,-403.42 459.91,-381.34 490.01,-343.66 506.86,-319.95"/>
+<polygon fill="#00ff24" stroke="#00ff24" points="509.57,-322.19 512.38,-311.97 503.81,-318.2 509.57,-322.19"/>
+</g>
+<!-- proc~unit_test_i1&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge22" class="edge">
+<title>proc~unit_test_i1&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#00ff91" d="M404.48,-369.83C411.58,-367.36 418.74,-364.54 425.31,-361.42 450.74,-349.35 477.33,-331.4 496.03,-317.74"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="497.89,-320.72 503.83,-311.95 493.72,-315.1 497.89,-320.72"/>
+</g>
+<!-- proc~unit_test_i2&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge23" class="edge">
+<title>proc~unit_test_i2&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#00ffff" d="M407.44,-327.82C424.39,-323.44 443.6,-318.47 461.35,-313.89"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="462.2,-317.28 471,-311.39 460.44,-310.51 462.2,-317.28"/>
+</g>
+<!-- proc~unit_test_l0&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge24" class="edge">
+<title>proc~unit_test_l0&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#0091ff" d="M421.04,-298.42C430.93,-298.42 441.21,-298.42 451.26,-298.42"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="450.95,-301.92 460.95,-298.42 450.95,-294.92 450.95,-301.92"/>
+</g>
+<!-- proc~unit_test_l1&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge25" class="edge">
+<title>proc~unit_test_l1&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#0024ff" d="M407.44,-269.02C424.39,-273.41 443.6,-278.37 461.35,-282.96"/>
+<polygon fill="#0024ff" stroke="#0024ff" points="460.44,-286.34 471,-285.45 462.2,-279.56 460.44,-286.34"/>
+</g>
+<!-- proc~unit_test_l2&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge26" class="edge">
+<title>proc~unit_test_l2&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#4800ff" d="M404.48,-227.01C411.58,-229.49 418.74,-232.3 425.31,-235.42 450.74,-247.5 477.33,-265.45 496.03,-279.1"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="493.72,-281.74 503.83,-284.89 497.89,-276.12 493.72,-281.74"/>
+</g>
+<!-- proc~unit_test_r0&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge27" class="edge">
+<title>proc~unit_test_r0&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#b600ff" d="M408.75,-184.99C414.54,-187.37 420.2,-190.16 425.31,-193.42 459.91,-215.5 490.01,-253.19 506.86,-276.9"/>
+<polygon fill="#b600ff" stroke="#b600ff" points="503.81,-278.64 512.38,-284.87 509.57,-274.66 503.81,-278.64"/>
+</g>
+<!-- proc~unit_test_r1&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge28" class="edge">
+<title>proc~unit_test_r1&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#ff00da" d="M411,-142.98C416.08,-145.33 420.96,-148.12 425.31,-151.42 468.76,-184.39 498.33,-243.13 512.19,-275.48"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="508.94,-276.8 516,-284.71 515.41,-274.13 508.94,-276.8"/>
+</g>
+<!-- proc~unit_test_r2&#45;&gt;proc~print_msg -->
+<g id="program~~demo_forunittest~~CallsGraph_edge29" class="edge">
+<title>proc~unit_test_r2&#45;&gt;proc~print_msg</title>
+<path fill="none" stroke="#ff006d" d="M412.37,-101.01C417.02,-103.35 421.42,-106.13 425.31,-109.42 452.67,-132.63 493.99,-230.16 512.12,-275.31"/>
+<polygon fill="#ff006d" stroke="#ff006d" points="508.8,-276.42 515.75,-284.42 515.3,-273.84 508.8,-276.42"/>
+</g>
+<!-- proc~print_msg&#45;&gt;colorize -->
+<g id="program~~demo_forunittest~~CallsGraph_edge30" class="edge">
+<title>proc~print_msg&#45;&gt;colorize</title>
+<path fill="none" stroke="#ff0000" d="M533.59,-285.97C554.46,-260.98 601.66,-204.43 627.45,-173.54"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="630.02,-175.92 633.74,-166 624.65,-171.43 630.02,-175.92"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprogramdemo_forunittestCallsGraph = svgPanZoom('#programdemo_forunittestCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 13.1.1 (20250720.1534)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 28.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.873868 0.873868) rotate(0) translate(4 28.27)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28.27 729.52,-28.27 729.52,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="69.27,-24.27 0,-24.27 0,0 69.27,0 69.27,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="34.63" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="143.89,-24.27 87.38,-24.27 87.38,0 143.89,0 143.89,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="115.63" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="221.39,-24.27 161.88,-24.27 161.88,0 221.39,0 221.39,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="191.63" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="368.27,-24.27 239,-24.27 239,0 368.27,0 368.27,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="303.63" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="529.39,-24.27 385.88,-24.27 385.88,0 529.39,0 529.39,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="457.63" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="603.89,-24.27 547.38,-24.27 547.38,0 603.89,0 603.89,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="575.63" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="725.52,-24.27 621.75,-24.27 621.75,0 725.52,0 725.52,-24.27"/>
+<text xml:space="preserve" text-anchor="middle" x="673.63" y="-8.53" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+
+    <section>
+    <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tests~2"></span>
+              type(<a href='../type/unit_tests.html'>unit_tests</a>)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tests</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+    
+
+    
+
+
+    
+
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">program </span><span class="n">demo_forunittest</span><span class="w"></span>
+<span class="w">   </span><span class="k">use </span><span class="n">forunittest</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">unit_tests</span><span class="p">,</span><span class="w"> </span><span class="n">rk</span><span class="w"></span>
+<span class="w">   </span><span class="k">implicit none</span>
+
+<span class="k">   type</span><span class="p">(</span><span class="n">unit_tests</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tests</span><span class="w"></span>
+
+<span class="w">   </span><span class="c">! Initialize the test suite with 5 entries</span>
+<span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">initialize</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="c">! Test 1: Real comparison with tolerance</span>
+<span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="mi">1</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">tol</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-4_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Pi test&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Compare pi&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;real&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="c">! Test 2: Integer equality</span>
+<span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="mi">2</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Int equal&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Integer equality&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="c">! Test 3: Logical vector check</span>
+<span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="mi">3</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.],</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.],</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Bool vec&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Logical vector&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;logical&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="c">! Test 4: Real zero comparison</span>
+<span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="mi">4</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Zero test&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Exact match&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;real&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="c">! Test 5: Intentional failure (should fail)</span>
+<span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="mi">5</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Wrong int&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Intentional fail&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="c">! Print a detailed summary and stop if score is too low</span>
+<span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">summary</span><span class="p">(</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">required_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">verbose</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">      </span><span class="n">stop_fail</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.)</span><span class="w"></span>
+
+<span class="k">end program </span><span class="n">demo_forunittest</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ForUnitTest
+ was developed by Seyed Ali Ghasemi<br>              &copy; 2025 BSD 3-Clause
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2025-08-04T14:05:45.056674+0000             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+  </body>
+</html>
