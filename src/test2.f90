@@ -390,4 +390,4 @@ program test2
    !> Summary
    call tests%summary(required_score=36.0, verbose=3, stop_fail=.true.)
 
-end program
+end program test2

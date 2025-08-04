@@ -139,4 +139,4 @@ program test1
       expected=reshape([(1.0_rk, 1.0_rk), (2.0_rk, 2.0_rk), (3.0_rk, 3.0_rk), (4.0_rk, 4.0_rk)], [2,2]),&
       msg="test 18 failed")
 
-end program
+end program test1
