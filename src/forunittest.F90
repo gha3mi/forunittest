@@ -139,7 +139,7 @@ contains
       ! per-test summary
       if (do_test) then
          print "(A)", colorize("Per-test result summary:", color_fg="cyan")
-         id_w    = 3
+         id_w    = 4
          name_w  = 4; group_w = 5; msg_w = 7; status_w = 6
          do i = 1, this%n
             name_w  = max(name_w,  len_trim(this%test(i)%name))
