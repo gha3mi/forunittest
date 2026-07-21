@@ -99,7 +99,8 @@ contains
       integer :: name_w, group_w, msg_w, passed_w, total_w, bar_col, status_w, id_w
       logical :: do_test, do_group, do_stop
       real    :: score, rate
-      character(len=:), allocatable :: test_name, test_msg, comp_version, comp_options
+      character(len=64) :: test_name, test_msg
+      character(len=:), allocatable :: comp_version, comp_options
       character(len=64), allocatable :: groups(:)
       character(len=64) :: grp
       character(len=8)  :: date_str
