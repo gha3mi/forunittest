@@ -1,3 +1,30 @@
+## [v0.3.1](https://github.com/gha3mi/forunittest/compare/v0.3.0...v0.3.1) - 2026-07-21
+
+
+### Fixes
+
+* fix: add preprocess section in fpm.toml ([0e81f9e](https://github.com/gha3mi/forunittest/commit/0e81f9e9bb838a59b2c48ef295bc655d24d23716)) by [@gha3mi](https://github.com/gha3mi)
+* fix: adjust character length for test_name and test_msg in summary subroutine ([507fcd8](https://github.com/gha3mi/forunittest/commit/507fcd8918f8e54e6fa325dc8a72533796901ba0)) by [@gha3mi](https://github.com/gha3mi)
+* fix: fortitude errors ([66ec6d4](https://github.com/gha3mi/forunittest/commit/66ec6d4f01693f231893acf2ef73b9831f1de451)) by [@gha3mi](https://github.com/gha3mi)
+* fix: update copyright year in fpm.toml ([304c15b](https://github.com/gha3mi/forunittest/commit/304c15b5c7401e28ed2e6e4c812dc05c017c8cff)) by [@gha3mi](https://github.com/gha3mi)
+
+### Others
+
+* docs: fix README ([ba9cb40](https://github.com/gha3mi/forunittest/commit/ba9cb4057a260e0312fbd393127b941d3b30f174)) by [@gha3mi](https://github.com/gha3mi)
+* ci: update CI/CD workflow ([ab5c113](https://github.com/gha3mi/forunittest/commit/ab5c1130e0a387a8b9d4828e164cdc4c12c25198)) by [@gha3mi](https://github.com/gha3mi)
+* Update README.md status table [ci skip] (#6) ([d07a206](https://github.com/gha3mi/forunittest/commit/d07a206c41a9c601b7bd3bd96b0ba889cfc85a9c)) by [@gha3mi](https://github.com/gha3mi)
+* ci: add lfortran compiler ([c5c6405](https://github.com/gha3mi/forunittest/commit/c5c6405b4a58a43840a692f31b944c1d27d683a0)) by [@gha3mi](https://github.com/gha3mi)
+* doc: fix typo ([39000ea](https://github.com/gha3mi/forunittest/commit/39000ea242154d07b133cd5868e9081c479ccc28)) by [@gha3mi](https://github.com/gha3mi)
+* Update README.md status table [ci skip] (#9) ([c508afc](https://github.com/gha3mi/forunittest/commit/c508afc9123705b8d70146095de5e80cafac5255)) by [@gha3mi](https://github.com/gha3mi)
+
+
+### Contributors
+- [@gha3mi](https://github.com/gha3mi)
+
+
+
+Full Changelog: [v0.3.0...v0.3.1](https://github.com/gha3mi/forunittest/compare/v0.3.0...v0.3.1)
+
 ## [v0.3.0](https://github.com/gha3mi/forunittest/compare/v0.2.0...v0.3.0) - 2025-08-04
 
 
