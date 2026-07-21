@@ -1,3 +1,18 @@
+## [v0.3.2](https://github.com/gha3mi/forunittest/compare/v0.3.1...v0.3.2) - 2026-07-21
+
+
+### Fixes
+
+* fix: update width of per-test result summary output ([7e538f4](https://github.com/gha3mi/forunittest/commit/7e538f411f992f5288a41f98671d74354487c1e6)) by [@gha3mi](https://github.com/gha3mi)
+
+
+### Contributors
+- [@gha3mi](https://github.com/gha3mi)
+
+
+
+Full Changelog: [v0.3.1...v0.3.2](https://github.com/gha3mi/forunittest/compare/v0.3.1...v0.3.2)
+
 ## [v0.3.1](https://github.com/gha3mi/forunittest/compare/v0.3.0...v0.3.1) - 2026-07-21
 
 
