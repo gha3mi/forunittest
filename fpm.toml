@@ -3,7 +3,7 @@ version    = "VERSION"
 license    = "BSD 3-Clause License"
 author     = "Seyed Ali Ghasemi"
 maintainer = "info@gha3mi.com"
-copyright  = "Copyright 2025, Seyed Ali Ghasemi"
+copyright  = "Copyright 2026, Seyed Ali Ghasemi"
 
 [build]
 auto-executables = false
@@ -47,7 +47,7 @@ main       = "demo.f90"
 
 [extra.ford]
 project             = "ForUnitTest"
-year                = "2025"
+year                = "2026"
 project_github      = "https://github.com/gha3mi/forunittest"
 author              = "Seyed Ali Ghasemi"
 email               = "info@gha3mi.com"
