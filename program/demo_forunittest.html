@@ -861,41 +861,41 @@ large graphs.</div>
 <span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">      </span><span class="n">tol</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-4_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Pi test&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Compare pi&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;real&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">"Pi test"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">"Compare pi"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">"real"</span><span class="p">)</span>
 
 <span class="w">   </span><span class="c">! Test 2: Integer equality</span>
 <span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="mi">2</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span>
 <span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Int equal&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Integer equality&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">"Int equal"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">"Integer equality"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">"int"</span><span class="p">)</span>
 
 <span class="w">   </span><span class="c">! Test 3: Logical vector check</span>
 <span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="mi">3</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span>
 <span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.],</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.],</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Bool vec&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Logical vector&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;logical&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">"Bool vec"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">"Logical vector"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">"logical"</span><span class="p">)</span>
 
 <span class="w">   </span><span class="c">! Test 4: Real zero comparison</span>
 <span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="mi">4</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span>
 <span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0_rk</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Zero test&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Exact match&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;real&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">"Zero test"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">"Exact match"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">"real"</span><span class="p">)</span>
 
 <span class="w">   </span><span class="c">! Test 5: Intentional failure (should fail)</span>
 <span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">test</span><span class="p">(</span><span class="mi">5</span><span class="p">)%</span><span class="n">check</span><span class="p">(&amp;</span>
 <span class="w">      </span><span class="n">res</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">      </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Wrong int&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Intentional fail&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="n">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">"Wrong int"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">msg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">"Intentional fail"</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">group</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">"int"</span><span class="p">)</span>
 
 <span class="w">   </span><span class="c">! Print a detailed summary and stop if score is too low</span>
 <span class="w">   </span><span class="k">call </span><span class="n">tests</span><span class="p">%</span><span class="n">summary</span><span class="p">(</span><span class="w"> </span><span class="p">&amp;</span>
@@ -926,7 +926,7 @@ large graphs.</div>
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2026-07-21T10:34:01.214874+0000             </p>
+ on 2026-11-06T12:29:28.237371+0000             </p>
           </div>
         </div>
         <br>
