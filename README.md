@@ -70,17 +70,17 @@ fpm run --example demo
 
 | OS | Compiler | Version | fpm | cmake |
 | --- | --- | ---: | :---: | :---: |
-| ubuntu 24.04 | `flang-new` | 22.1.8 | 0.13.0 ✅ | 4.4.0 ✅ |
-| ubuntu 24.04 | `gfortran` | 15.2.0 | 0.13.0 ✅ | 4.4.0 ✅ |
-| ubuntu 24.04 | `ifx` | 2026.1.0 | 0.13.0 ✅ | 4.4.0 ✅ |
-| ubuntu 24.04 | `lfortran` | 0.64.0 | 0.12.0 ✅ | 4.4.0 ✅ |
-| ubuntu 24.04 | `nvfortran` | 26.5 | 0.13.0 ✅ | 4.4.0 ✅ |
-| macos 26 | `gfortran` | 15.2.0 | 0.13.0 ✅ | 4.4.0 ✅ |
-| macos 26 | `lfortran` | 0.64.0 | 0.12.0 ✅ | 4.4.0 ❌ |
-| windows 2025 | `flang-new` | 22.1.8 | 0.13.0 ✅ | 4.4.0 ✅ |
-| windows 2025 | `gfortran` | 15.2.0 | 0.13.0 ✅ | 4.4.0 ✅ |
-| windows 2025 | `ifx` | 2026.1.0 | 0.12.0 ✅ | 4.4.0 ✅ |
-| windows 2025 | `lfortran` | 0.64.0 | 0.12.0 ✅ | 4.4.0 ❌ |
+| ubuntu 24.04 | `flang-new` | 23.1.4 | 0.13.0 ❌ | 4.4.5 ❌ |
+| ubuntu 24.04 | `gfortran` | 16.2.0 | 0.13.0 ✅ | 4.4.5 ✅ |
+| ubuntu 24.04 | `ifx` | 2026.2.0 | 0.13.0 ✅ | 4.4.5 ✅ |
+| ubuntu 24.04 | `lfortran` | 0.68.0 | 0.12.0 ✅ | 4.4.5 ✅ |
+| ubuntu 24.04 | `nvfortran` | 26.9 | 0.13.0 ✅ | 4.4.5 ✅ |
+| macos 26 | `gfortran` | 16.2.0 | 0.13.0 ✅ | 4.4.5 ✅ |
+| macos 26 | `lfortran` | 0.68.0 | 0.12.0 ✅ | 4.4.5 ❌ |
+| windows 2025 | `flang-new` | 23.1.4 | 0.13.0 ❌ | 4.4.5 ❌ |
+| windows 2025 | `gfortran` | 16.2.0 | 0.13.0 ✅ | 4.4.5 ✅ |
+| windows 2025 | `ifx` | 2026.2.0 | 0.12.0 ✅ | 4.4.5 ✅ |
+| windows 2025 | `lfortran` | 0.68.0 | 0.12.0 ✅ | 4.4.5 ❌ |
 
 <!-- STATUS:setup-fortran-conda:END -->
 
